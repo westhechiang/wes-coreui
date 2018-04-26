@@ -1,0 +1,129 @@
+{
+  "name": "rm-coreui",
+  "version": "2.13.1",
+  "main": "dist/index.js",
+  "author": "Wesley Chiang",
+  "license": "MIT",
+  "scripts": {
+    "clean-dist": "rm -rf ./dist",
+    "build": "yarn run clean-dist && NODE_ENV=production `yarn bin`/babel ./src --out-dir ./dist && cp -r ./src/assets ./dist/assets",
+    "test": "node scripts/test.js --env=jsdom",
+    "slack": "node scripts/slack.js",
+    "postversion": "npm publish .",
+    "prepublish": "yarn run build",
+    "postpublish": "yarn run slack && git push origin master",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "rules": {
+      "prefer-rest-params": "off",
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ],
+      "arrow-body-style": "off",
+      "react/require-default-props": 0,
+      "react/forbid-prop-types": 0,
+      "func-names": 0,
+      "import/no-named-as-default": 0
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true
+    }
+  },
+  "peerDependencies": {
+    "react": "^16.2.0"
+  },
+  "jest": {
+    "testResultsProcessor": "./node_modules/jest-junit-reporter",
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.js?(x)",
+      "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.3.11",
+    "@storybook/addon-links": "^3.3.11",
+    "@storybook/addons": "^3.3.11",
+    "@storybook/react": "^3.3.11",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-storybook-decorator-background": "^1.0.5"
+  },
+  "dependencies": {
+    "babel-eslint": "7.2.3",
+    "babel-jest": "20.0.3",
+    "clean-element": "^1.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-to-json": "^3.3.3",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-config-react-app": "^1.0.5",
+    "eslint-loader": "1.7.1",
+    "eslint-plugin-flowtype": "2.34.0",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "7.1.0",
+    "git-last-commit": "^0.3.0",
+    "grid-styled": "3.2.1",
+    "highcharts": "^6.0.7",
+    "jest": "^22.4.3",
+    "jest-enzyme": "^6.0.0",
+    "jest-junit-reporter": "1.1.0",
+    "moment": "^2.21.0",
+    "numeral": "^2.0.6",
+    "prop-types": "^15.6.0",
+    "react-hamburger-menu": "^1.1.0",
+    "react-highcharts": "^16.0.2",
+    "react-router-dom": "^4.2.2",
+    "react-select": "^1.2.1",
+    "react-slick": "^0.21.0",
+    "react-tooltip": "^3.4.0",
+    "react-visibility-sensor": "^3.11.0",
+    "rm-react-animations": "^1.0.0",
+    "slack-node": "^0.1.8",
+    "styled-components": "^3.2.3",
+    "styled-normalize": "^4.0.0",
+    "styled-system": "^2.2.1"
+  }
+}
