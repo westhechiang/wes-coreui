@@ -8,10 +8,9 @@
     "clean-dist": "rm -rf ./dist",
     "build": "yarn run clean-dist && NODE_ENV=production `yarn bin`/babel ./src --out-dir ./dist && cp -r ./src/assets ./dist/assets",
     "test": "node scripts/test.js --env=jsdom",
-    "slack": "node scripts/slack.js",
     "postversion": "npm publish .",
     "prepublish": "yarn run build",
-    "postpublish": "yarn run slack && git push origin master",
+    "postpublish": "git push origin master",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
