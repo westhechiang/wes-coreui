@@ -2,76 +2,87 @@ import { injectGlobal } from 'styled-components';
 import styledNormalize from 'styled-normalize';
 
 // global css; only add to this if there are no other options
-// TODO -- Vince/Wes -- Discuss where a better place for slick css stuff is.
-// TODO -- two to look at are @import of slick css stuff
-// Note regarding `.slick-dots` stuff
-//   margin was done for design to pull dots together more than default CSS
-//   li button stuff avoids bug with default `:focus` looking continually active
 export const globalCSS = injectGlobal`
-  @import url("https://use.typekit.net/yqf3dfe.css");
-  @import url("https://cloud.typography.com/7455036/7907792/css/fonts.css");
-  @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css");
-  @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css");
   @import url("https://unpkg.com/react-select@1.2.1/dist/react-select.css");
+  @import url("https://use.typekit.net/shl5spr.css");
   ${styledNormalize}
-  .slick-dots li {
-    margin: 0;
-  }
-  .slick-dots li button:focus:before {
-    opacity: 0.25;
-  }
-  .slick-dots li.slick-active button:before {
-    opacity: 0.75;
-  }
 `;
 
 const colors = {
-  orange: '#E9573E',
+  black: '#000000',
   white: '#FFFFFF',
-  black: '#202020',
-  // TODO: Post merging all projects into 1 repository,
-  // do a grep and replace all gray.X that have been
-  // deprecated
   gray: [
-    '#F8F8F8', // 0
-    '#F2F2F2', // 1
-    'pink', // 2 - #808285 deprecated
-    'pink', // 3 - #434A54 deprecated
-    'pink', // 4 - #414042 deprecated
-    'pink', // 5 - #A7A9AC deprecated
-    'pink', // 6 - #E6E7E8 deprecated
-    '#777777', // 7
-    '#202020', // 8
-    '#171717', // 9
-    '#9b9b9b', // 10
-    'pink', // 11 - #bebebe deprecated
-    '#ededed', // 12
+    '#DBDFE1', // 0
+    '#505759', // 1
+    '#919799', // 2
+    '#777D80', // 3
+    '#C6CBCC', // 4
+    '#AAB0B3', // 5
+    '#666666', // 6
+    '#E7ECEE', // 7
+    '#2A2D2F', // 8
+    '#777D7F', // 9
+    '#F8FAFA', // 10
+    '#D2D8D9', // 11
   ],
   blue: [
-    '#4B89DC',
-    '#176DB6',
-    '#A4C2D5',
+    '#1c293e', // 0
+    '#293c5c', // 1
+    '#354f7a', // 2
+    '#416199', // 3
+    '#4f75b6', // 4
+    '#6c8dc3', // 5
+    '#EBFAFF', // 6
+    '#233A6B', // 7
+    '#F2FAFF', // 8
+  ],
+  cyan: [
+    '#0A637C', // 0
+    '#0D83A4', // 1
+    '#0FA3CD', // 2
+    '#15C0F1', // 3
+    '#3ECBF3', // 4
+    '#65D6F6', // 5
+  ],
+  green: [
+    '#5AA400', // 0
+  ],
+  red: [
+    '#ca1420', // 0
+    '#FED1CB', // 1
+  ],
+  yellow: [
+    '#FFEEC2',
   ],
   transparent: 'transparent',
 };
 
 const fontSizes = [
+  8, // 0
+  10, // 1
+  12, // 2
+  15, // 3
+  16, // 4
+  18, // 5
+  24, // 6
+  35, // 7
+  44, // 8
 ];
 
-const breakpoints = [
-  '40em', // 640px
-  '52em', // 832px
-  '64em', // 1024px
-  '120em', // 1920px
-];
+const breakpoints = Object.values({
+  0: '40em', // 640px
+  1: '52em', // 832px
+  2: '64em', // 1024px
+  3: '120em', // 1920px
+});
 
 const space = [
-  0,
-  1,
-  2,
-  3,
-  4,
-  5,
+  0, // 0
+  5, // 1
+  10, // 2
+  20, // 3
+  40, // 4
+  60, // 5
 ];
 
 const fontWeights = {
@@ -79,12 +90,14 @@ const fontWeights = {
   light: 300,
   book: 400,
   medium: 500,
+  semiBold: 600,
   bold: 700,
 };
 
 const borders = [
   0,
   '1px solid',
+  '2px solid',
 ];
 
 const letterSpacings = {
@@ -93,23 +106,30 @@ const letterSpacings = {
   xlarge: '0.2em',
 };
 
-const radii = [
-  0,
-  2,
-  4,
-  8,
-];
+const radii = Object.values({
+  0: 0,
+  1: 2,
+  2: 4,
+  3: 8,
+});
 
-const lineHeights = [
-  1,
-  1.125,
-  1.25,
-  1.5,
-];
+const lineHeights = Object.values({
+  0: 1,
+  1: 1.125,
+  2: 1.25,
+  3: 1.5,
+});
 
 const fontFamily = {
-  serif: 'mrs-eaves-xl-serif-narrow, serif',
-  sansSerif: '"Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif',
+  sansSerif: 'Gibson, Arial, Helvetica, sans-serif',
+};
+
+const heights = {
+  fullHeight: '100%',
+  fullVhMinusNav: 'calc(100vh - 246px)',
+  fullHeightMinusNav: 'calc(100% - 246px)',
+  fullVhMinusRefineListFooter: 'calc(100vh - 70px)',
+  undefined: 'auto',
 };
 
 
@@ -124,6 +144,7 @@ const Theme = {
   radii,
   lineHeights,
   fontFamily,
+  heights,
 };
 
 export default Theme;

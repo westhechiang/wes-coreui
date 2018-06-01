@@ -5,6 +5,7 @@ import {
   borders,
   borderColor,
   width,
+  position,
   propTypes,
   maxWidth,
   minWidth,
@@ -37,8 +38,12 @@ import {
 const CleanFlex = CleanElement('div');
 
 CleanFlex.propTypes = {
-  ...propTypes.wrap,
+  ...propTypes.borders,
   ...propTypes.borderColor,
+  ...propTypes.color,
+  ...propTypes.width,
+  ...propTypes.height,
+  ...propTypes.wrap,
   ...propTypes.maxWidth,
   ...propTypes.minWidth,
   ...propTypes.minHeight,
@@ -47,13 +52,25 @@ CleanFlex.propTypes = {
   ...propTypes.borderTop,
   ...propTypes.borderRight,
   ...propTypes.borderLeft,
+  ...propTypes.bottom,
+  ...propTypes.top,
+  ...propTypes.right,
+  ...propTypes.left,
   ...propTypes.flexDirection,
   ...propTypes.textAlign,
+  ...propTypes.justifyContent,
   ...propTypes.zIndex,
   ...propTypes.backgroundImage,
   ...propTypes.responsiveBackgroundSize,
   ...propTypes.backgroundPosition,
   ...propTypes.backgroundRepeat,
+  ...propTypes.position,
+  ...propTypes.space,
+  h: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array,
+    PropTypes.number,
+  ]),
   boxSizing: PropTypes.string,
   hover: PropTypes.bool,
   hoverShadow: PropTypes.bool,
@@ -63,6 +80,8 @@ CleanFlex.propTypes = {
     PropTypes.array,
     PropTypes.number,
   ]),
+  overflowY: PropTypes.string,
+  flexShrink: PropTypes.string,
 };
 
 const ExtendedFlex = styled(CleanFlex)`
@@ -90,11 +109,14 @@ const ExtendedFlex = styled(CleanFlex)`
   ${backgroundRepeat}
   ${backgroundSize}
   ${display}
+  ${position}
   box-sizing: ${props => props.boxSizing || 'border-box'};
   position: ${props => props.position || 'static'};
   opacity: ${props => props.opacity || '1'};
   transition: ${props => props.transition || 'all 0s 0s ease'};
   z-index: ${props => props.zIndex || 'auto'};
+  overflow-y: ${props => props.overflowY || 'visible'};
+  flex-shrink: ${props => props.flexShrink || '1'};
 
   &:hover {
     box-shadow: ${props => (props.hoverShadow ? hoverShadowEffect : 'none')};

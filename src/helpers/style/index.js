@@ -6,7 +6,9 @@ import {
 // @FIXME: This is to be deprecrated since styled-system
 // now has a height function that is the same.
 export const height = responsiveStyle({
+  alias: 'h',
   prop: 'height',
+  key: 'heights',
   cssProperty: 'height',
   numberToPx: true,
 });

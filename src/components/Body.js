@@ -3,51 +3,27 @@ import PropTypes from 'prop-types';
 import { Text } from '../';
 
 export const types = {
-  B1: {
-    fontSize: [13, 13, 14, 14, 18],
+  B1: { // used by 'compare with' text in rent roll
+    fontWeight: 'semiBold',
+    fontSize: 2,
     fontFamily: 'sansSerif',
-    fontWeight: 'extraLight',
-    textTransform: 'none',
-    fontStyle: 'normal',
-    letterSpacing: 'normal',
-    lineHeight: 1.75,
   },
   B2: {
-    fontSize: [12, 12, 12, 12, 14],
-    fontFamily: 'sansSerif',
-    fontWeight: 'extraLight',
-    textTransform: 'none',
-    fontStyle: 'italic',
-    letterSpacing: 'normal',
-    lineHeight: 1.75,
+    fontSize: 10,
+    fontWeight: 'semiBold',
   },
   B3: {
-    fontSize: [10, 10, 12, 12, 15],
-    fontFamily: 'sansSerif',
-    fontWeight: 'normal',
-    textTransform: 'none',
-    fontStyle: 'normal',
-    letterSpacing: 'normal',
-    lineHeight: 1.75,
+    fontSize: 14,
+    fontWeight: 'medium',
   },
   B4: {
-    fontSize: [20, 20, 26, 26, 30],
-    fontFamily: 'serif',
-    fontWeight: 'normal',
-    textTransform: 'none',
-    fontStyle: 'normal',
-    letterSpacing: 'normal',
-    lineHeight: 1.5,
+    fontSize: 15,
+    fontWeight: 'medium',
   },
   B5: {
-    fontSize: [10, 10, 12, 12, 14],
-    fontFamily: 'sansSerif',
-    fontWeight: 'normal',
-    textTransform: 'none',
-    fontStyle: 'normal',
-    letterSpacing: 'normal',
-    lineHeight: 1.5,
-  },
+    fontSize: 12,
+    fontWeight: 'semiBold',
+  }
 };
 
 const Body = (props) => {
@@ -71,17 +47,11 @@ const Body = (props) => {
 
 Body.propTypes = {
   children: PropTypes.any,
-  type: PropTypes.oneOf([
-    'B1',
-    'B2',
-    'B3',
-    'B4',
-    'B5',
-  ]).isRequired,
+  type: PropTypes.oneOf(Object.keys(types)).isRequired,
 };
 
 Body.defaultProps = {
-  color: 'black', // NOTE: Not "true black" (#000000), Will use Theme's black[-ish].
+  color: 'black',
 };
 
 export default Body;

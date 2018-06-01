@@ -9,6 +9,7 @@ export const types = {
     fontWeight: 500,
     textTransform: 'uppercase',
     letterSpacing: '0.150em',
+    lineHeight: 2.1,
   },
   D2: {
     fontSize: [9, 9, 13, 13, 15],
@@ -16,6 +17,7 @@ export const types = {
     fontWeight: 700,
     textTransform: 'none',
     letterSpacing: 'normal',
+    lineHeight: 2.1,
   },
   D3: {
     fontSize: [10, 10, 12, 12, 15],
@@ -23,6 +25,7 @@ export const types = {
     fontWeight: 'normal',
     textTransform: 'none',
     letterSpacing: 'normal',
+    lineHeight: 'normal',
   },
   D4: {
     fontSize: [10, 10, 10, 10, 12],
@@ -30,6 +33,7 @@ export const types = {
     fontWeight: 500,
     textTransform: 'uppercase',
     letterSpacing: 2,
+    lineHeight: 1.5,
   },
   D5: {
     fontSize: [11, 11, 12, 13, 16],
@@ -37,6 +41,7 @@ export const types = {
     fontWeight: 700,
     textTransform: 'none',
     letterSpacing: 'normal',
+    lineHeight: 2.1,
   },
   D6: {
     fontSize: [16, 16, 20, 20, 24],
@@ -44,6 +49,7 @@ export const types = {
     fontWeight: 700,
     textTransform: 'none',
     letterSpacing: 'normal',
+    lineHeight: 'normal',
   },
   D7: {
     fontSize: [60, 60, 60, 60, 60],
@@ -51,6 +57,7 @@ export const types = {
     fontWeight: 500,
     textTransform: 'none',
     letterSpacing: 'normal',
+    lineHeight: 'normal',
   },
   D8: {
     fontSize: [72, 72, 72, 72, 72],
@@ -58,6 +65,7 @@ export const types = {
     fontWeight: 700,
     textTransform: 'none',
     letterSpacing: 'normal',
+    lineHeight: 'normal',
   },
 };
 
@@ -71,6 +79,7 @@ const Data = (props) => {
       fontWeight={types[type].fontWeight}
       textTransform={types[type].textTransform}
       letterSpacing={types[type].letterSpacing}
+      lineHeight={types[type].lineHeight}
       {...passedProps}
     >
       { children }

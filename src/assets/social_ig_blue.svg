@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>instagram</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="desktop/navigation/social/video_blu" transform="translate(-135.000000, 0.000000)" fill="#176DB6">
+            <g id="Social">
+                <path d="M142,0 L151,0 C154.865993,-7.10171439e-16 158,3.13400675 158,7 L158,16 C158,19.8659932 154.865993,23 151,23 L142,23 C138.134007,23 135,19.8659932 135,16 L135,7 C135,3.13400675 138.134007,7.10171439e-16 142,0 Z M146.5,17 C149.537566,17 152,14.5375661 152,11.5 C152,8.46243388 149.537566,6 146.5,6 C143.462434,6 141,8.46243388 141,11.5 C141,14.5375661 143.462434,17 146.5,17 Z M146.5,15 C144.567003,15 143,13.4329966 143,11.5 C143,9.56700338 144.567003,8 146.5,8 C148.432997,8 150,9.56700338 150,11.5 C150,13.4329966 148.432997,15 146.5,15 Z M153.5,6 C154.328427,6 155,5.32842712 155,4.5 C155,3.67157288 154.328427,3 153.5,3 C152.671573,3 152,3.67157288 152,4.5 C152,5.32842712 152.671573,6 153.5,6 Z" id="instagram"></path>
+            </g>
+        </g>
+    </g>
+</svg>
