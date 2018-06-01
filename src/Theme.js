@@ -12,23 +12,23 @@ const colors = {
   black: '#000000',
   white: '#FFFFFF',
   gray: [
-    '#8e8e90',
-    '#161616',
+    '#8e8e90', // 0
+    '#161616', // 1
   ],
   blue: [
-    '#1D4E63',
-    '#5F7D8A',
-    '#0079B4',
-    '#A7CDE7',
+    '#1D4E63', // 0 
+    '#5F7D8A', // 1 
+    '#0079B4', // 2 
+    '#A7CDE7', // 3 
   ],
   cyan: [
   ],
   green: [
-    '#90BE00',
-    '#E9FFAA'
+    '#90BE00', // 0
+    '#E9FFAA', // 1
   ],
   orange: [
-    '#CA5B01'
+    '#CA5B01' // 0
   ],
   red: [
   ],
@@ -49,12 +49,12 @@ const fontSizes = [
   44, // 8
 ];
 
-const breakpoints = Object.values({
-  0: '40em', // 640px
-  1: '52em', // 832px
-  2: '64em', // 1024px
-  3: '120em', // 1920px
-});
+const breakpoints = [
+  '40em', // 640px
+  '52em', // 832px
+  '64em', // 1024px
+  '120em', // 1920px
+];
 
 const space = [
   0, // 0
@@ -86,19 +86,19 @@ const letterSpacings = {
   xlarge: '0.2em',
 };
 
-const radii = Object.values({
-  0: 0,
-  1: 2,
-  2: 4,
-  3: 8,
-});
+const radii = [
+  0,
+  2,
+  4,
+  8,
+];
 
-const lineHeights = Object.values({
-  0: 1,
-  1: 1.125,
-  2: 1.25,
-  3: 1.5,
-});
+const lineHeights = [
+  1,
+  1.125,
+  1.25,
+  1.5,
+];
 
 const fontFamily = {
   sansSerif: 'Gibson, Arial, Helvetica, sans-serif',
