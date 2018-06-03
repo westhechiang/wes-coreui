@@ -24,6 +24,20 @@ export const types = {
     letterSpacing: 'xlarge',
     textTransform: 'uppercase',
   },
+  H4: {
+    fontFamily: 'heading',
+    fontSize: 6,
+    fontWeight: 2,
+    letterSpacing: 'normal',
+    textTransform: 'uppercase',
+  },
+  H5: {
+    fontFamily: 'heading',
+    fontSize: 0,
+    fontWeight: 5,
+    letterSpacing: 'xlarge',
+    textTransform: 'uppercase',
+  },
 };
 
 const Heading = (props) => {
