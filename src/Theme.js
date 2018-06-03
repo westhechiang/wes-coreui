@@ -4,7 +4,7 @@ import styledNormalize from 'styled-normalize';
 // global css; only add to this if there are no other options
 export const globalCSS = injectGlobal`
   @import url("https://unpkg.com/react-select@1.2.1/dist/react-select.css");
-  @import url("https://use.typekit.net/shl5spr.css");
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
   ${styledNormalize}
 `;
 
@@ -14,12 +14,13 @@ const colors = {
   gray: [
     '#8e8e90', // 0
     '#161616', // 1
+    '#F2F2F2', // 2
   ],
   blue: [
-    '#1D4E63', // 0 
-    '#5F7D8A', // 1 
-    '#0079B4', // 2 
-    '#A7CDE7', // 3 
+    '#273542', // 0
+    '#5F7D8A', // 1
+    '#0079B4', // 2
+    '#A7CDE7', // 3
   ],
   cyan: [
   ],
@@ -28,11 +29,12 @@ const colors = {
     '#E9FFAA', // 1
   ],
   orange: [
-    '#CA5B01' // 0
+    '#CA5B01', // 0
   ],
   red: [
   ],
   yellow: [
+    '#D8C6B1',
   ],
   transparent: 'transparent',
 };
@@ -65,14 +67,16 @@ const space = [
   60, // 5
 ];
 
-const fontWeights = {
-  extraLight: 200,
-  light: 300,
-  book: 400,
-  medium: 500,
-  semiBold: 600,
-  bold: 700,
-};
+const fontWeights = [
+  200, // 0
+  300, // 1
+  400, // 2
+  500, // 3
+  600, // 4
+  700, // 5
+  800, // 6
+  900, // 7
+];
 
 const borders = [
   0,
@@ -101,7 +105,7 @@ const lineHeights = [
 ];
 
 const fontFamily = {
-  sansSerif: 'Gibson, Arial, Helvetica, sans-serif',
+  heading: '"Open Sans", Arial, Helvetica, sans-serif',
 };
 
 const heights = {

@@ -4,6 +4,7 @@ import {
   width,
   space,
   color,
+  display,
   textAlign,
   lineHeight,
   fontWeight,
@@ -28,6 +29,7 @@ const Text = styled.p`
   ${minHeight}
   ${maxHeight}
   ${zIndex}
+  ${display}
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: ${props => Theme.fontFamily[props.fontFamily] || 'Helvetica, Arial, sans-serif'};
@@ -35,7 +37,6 @@ const Text = styled.p`
   text-transform: ${props => (props.textTransform || 'none')};
   font-style: ${props => props.fontStyle || 'normal'};
   white-space: ${props => props.whiteSpace || 'normal'};
-  display: ${props => props.display || 'inline'};
   opacity: ${props => props.opacity || '1'};
   box-sizing: border-box;
   transition: ${props => props.transition || 'none'};

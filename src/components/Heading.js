@@ -3,10 +3,26 @@ import PropTypes from 'prop-types';
 import { Text } from '../';
 
 export const types = {
-  H1: { // used by 'In Place / Stabilized' in rent roll
-    fontFamily: 'sansSerif',
+  H1: {
+    fontFamily: 'heading',
+    fontSize: 7,
+    fontWeight: 2,
+    letterSpacing: 'xlarge',
+    textTransform: 'uppercase',
+  },
+  H2: {
+    fontFamily: 'heading',
     fontSize: 3,
-    fontWeight: 'semiBold',
+    fontWeight: 4,
+    letterSpacing: 'normal',
+    textTransform: 'uppercase',
+  },
+  H3: {
+    fontFamily: 'heading',
+    fontSize: 1,
+    fontWeight: 5,
+    letterSpacing: 'xlarge',
+    textTransform: 'uppercase',
   },
 };
 

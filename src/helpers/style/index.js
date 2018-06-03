@@ -19,7 +19,7 @@ export const responsiveBackgroundSize = responsiveStyle({
   cssProperty: 'background-size',
 });
 
-export const hoverShadowEffect = '0 6px 14px rgba(0,0,0,0.05), 0 6px 10px rgba(0,0,0,0.05)';
+export const hoverShadowEffect = () => '0 6px 14px rgba(0,0,0,0.2)';
 export const hoverRemoveFilterEffect = `
   img {
     filter: none;

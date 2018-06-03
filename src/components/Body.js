@@ -3,27 +3,18 @@ import PropTypes from 'prop-types';
 import { Text } from '../';
 
 export const types = {
-  B1: { // used by 'compare with' text in rent roll
-    fontWeight: 'semiBold',
-    fontSize: 2,
+  B1: {
+    fontWeight: 1,
+    fontSize: 3,
     fontFamily: 'sansSerif',
+    lineHeight: 2,
   },
   B2: {
-    fontSize: 10,
-    fontWeight: 'semiBold',
+    fontWeight: 1,
+    fontSize: 2,
+    fontFamily: 'sansSerif',
+    lineHeight: 2,
   },
-  B3: {
-    fontSize: 14,
-    fontWeight: 'medium',
-  },
-  B4: {
-    fontSize: 15,
-    fontWeight: 'medium',
-  },
-  B5: {
-    fontSize: 12,
-    fontWeight: 'semiBold',
-  }
 };
 
 const Body = (props) => {

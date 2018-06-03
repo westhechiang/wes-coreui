@@ -29,7 +29,7 @@ const StyledTooltip = styled(ReactTooltip)`
       ${maxWidth}
       ${width}
       border-radius: 1px;
-      box-shadow: ${hoverShadowEffect};
+      box-shadow: ${hoverShadowEffect()};
 
       &.border {
         border: 1px solid #202020;

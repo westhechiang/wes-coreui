@@ -73,6 +73,7 @@ CleanFlex.propTypes = {
   ]),
   boxSizing: PropTypes.string,
   hover: PropTypes.bool,
+  shadow: PropTypes.bool,
   hoverShadow: PropTypes.bool,
   hoverRemoveFilter: PropTypes.bool,
   rbgSize: PropTypes.oneOfType([
@@ -117,9 +118,10 @@ const ExtendedFlex = styled(CleanFlex)`
   z-index: ${props => props.zIndex || 'auto'};
   overflow-y: ${props => props.overflowY || 'visible'};
   flex-shrink: ${props => props.flexShrink || '1'};
+  box-shadow: ${props => (props.shadow ? hoverShadowEffect() : 'none')};
 
   &:hover {
-    box-shadow: ${props => (props.hoverShadow ? hoverShadowEffect : 'none')};
+    box-shadow: ${props => (props.hoverShadow ? hoverShadowEffect() : 'none')};
     cursor: ${props => (props.hover ? 'pointer' : 'auto')};
     ${props => (props.hoverRemoveFilter ? hoverRemoveFilterEffect : '')}
   }
