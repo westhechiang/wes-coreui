@@ -84,11 +84,12 @@ const borders = [
   '2px solid',
 ];
 
-const letterSpacings = {
-  normal: 'normal',
-  large: '0.1em',
-  xlarge: '0.2em',
-};
+const letterSpacings = [
+  'normal',
+  '0.1em',
+  '0.2em',
+  '0.3em',
+];
 
 const radii = [
   0,
