@@ -92,6 +92,10 @@ const TextLink = styled(CleanA)`
     ${hoverBackgroundColor}
     ${hoverBorderColor}
   }
+
+  &:visited {
+    ${color}
+  }
 `;
 
 export default TextLink;
